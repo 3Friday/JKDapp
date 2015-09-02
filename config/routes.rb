@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :categories
 
+  get ':page' => 'static#display'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

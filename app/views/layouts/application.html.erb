@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>KidCode</title>
+  <title>Just Kidding App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<div class = "header">
+		<nav>
+			<ul class="menu">
+			<li><a href="about">About the Project</a></li>
+			<li><a href="levels_front">Levels</a></li>
+			<li><a href="howfar">How far are you</a></li>
+			</ul>
+		</nav>
+		<div class = "signing">
+			<a href="#" class = "signup">Create an account</a>
+			<a href="#" class = "login">Log in</a>
+		</div>
+	</div>
+	<div class = "clear"></div>
 <%= yield %>
 
 </body>
