@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   attr_accessible: user, email, password
 
   def index(msg)
-    @msg =
+
   end
 
   end
