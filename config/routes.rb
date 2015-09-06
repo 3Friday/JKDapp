@@ -7,10 +7,11 @@ Rails.application.routes.draw do
 
   resources :tutorials
   resources :levels
+  resources :welcome
 
   resources :categories
 
-  get ':page' => 'static#display'
+  get ':page' => 'tutorials#show'
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -194,6 +194,8 @@ img {
   font-size: 5em;
   color: pink;
   text-shadow: 5px 5px 5px #C2A7C8;
+  text-decoration:none;
+  margin:0 7%;
 }
 
 /*Home page*/
@@ -258,7 +260,7 @@ table {
   color:salmon;
 }
 
-.signup, .login {
+.signup, .login, .logout {
   text-decoration: none;
   padding:10px;
   background-color: #C2A7C8;
