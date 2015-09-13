@@ -10,14 +10,15 @@
 	<div class = "header">
 		<nav>
 			<ul class="menu">
-			<li><a href="about">About the Project</a></li>
-			<li><a href="levels_front">Levels</a></li>
-			<li><a href="howfar">How far are you</a></li>
+				<%# link_to "About the Project", controller: "welcome", action: "about"	%>
+				<li><a href="about">About the Project</a></li>
+				<li><a href="levels_front">Levels</a></li>
+				<li><a href="howfar">How far are you</a></li>
 			</ul>
 		</nav>
 		<div class = "signing">
 			<%# if user_signed_in? %>
-				<a href="#" class = "signup">Create an account</a>
+				<%= link_to "Create an account", new_user_path, class: "signup" %>
 				<a href="#" class = "login">Log in</a>
 			<%# else %>
 				<a href="#" class = "logout">Log out</a>

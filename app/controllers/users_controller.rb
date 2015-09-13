@@ -5,6 +5,13 @@ class UsersController < ApplicationController
   before_action :validate_editor, only: [:edit, :update]
   before_action :require_authentication, only: [:edit_current_user]
 
+  def new
+    @user = User.new
+  end
+
+  def show
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save

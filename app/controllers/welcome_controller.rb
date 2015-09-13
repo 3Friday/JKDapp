@@ -17,16 +17,17 @@ class WelcomeController < ApplicationController
 
 
   def about
+    render template: 'welcome/about'
   end
 
 
   def home
-
+    render template: 'welcome/home'
   end
 
 
   def howfar
-
+    render template: 'welcome/howfar'
   end
 
 end
