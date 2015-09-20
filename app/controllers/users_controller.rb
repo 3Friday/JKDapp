@@ -2,23 +2,25 @@ class UsersController < ApplicationController
 
 
  # all actions in this controller are scoped to the current_user
-  before_action :validate_editor, only: [:edit, :update]
-  before_action :require_authentication, only: [:edit_current_user]
+  # before_action :validate_editor, only: [:edit, :update]
+  # before_action :require_authentication, only: [:edit_current_user]
 
   def new
     @user = User.new
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      sign_in @user
-      redirect_back_or url_after_create
+      redirect_to @user
+      # sign_in @user
+      # redirect_back_or url_after_create
     else
-      render template: 'users/new'
+      render 'new'
     end
   end
 

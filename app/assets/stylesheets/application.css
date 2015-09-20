@@ -29,6 +29,7 @@ html, body {
   color: white;
 }
 
+
 .banner{
   background-color: #C2A7C8;
 }
@@ -182,6 +183,10 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.index-skeleton{
+  height:300px;
 }
 
 #template {

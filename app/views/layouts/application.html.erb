@@ -10,10 +10,9 @@
 	<div class = "header">
 		<nav>
 			<ul class="menu">
-				<%# link_to "About the Project", controller: "welcome", action: "about"	%>
-				<li><a href="about">About the Project</a></li>
+				<li><%= link_to "About the Project", controller: "welcome", action: "about" %></li>
 				<li><a href="levels_front">Levels</a></li>
-				<li><a href="howfar">How far are you</a></li>
+				<li><%= link_to "How far are you", controller: "welcome", action: "howfar" %></li>
 			</ul>
 		</nav>
 		<div class = "signing">
@@ -26,6 +25,7 @@
 		</div>
 	</div>
 	<div class = "clear"></div>
+
 <%= yield %>
 
 </body>
