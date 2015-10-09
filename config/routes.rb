@@ -15,10 +15,10 @@ Rails.application.routes.draw do
   resources :categories
 
   # get ':page' => 'welcome#view'
-  get "welcome/about"
-  get "welcome/howfar"
-  get "welcome/home"
-  get "welcome/howitworks"
+  get "welcome/about", as: :about
+  get "welcome/howfar", as: :howfar
+  get "welcome/home", as: :home
+  get "welcome/howitworks", as: :howitworks
   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

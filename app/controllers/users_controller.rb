@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   # before_action :validate_editor, only: [:edit, :update]
   # before_action :require_authentication, only: [:edit_current_user]
 
+  # before_action :authenticate_member!
+
   def new
     @user = User.new
   end
@@ -16,16 +18,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user
-      # sign_in @user
-      # redirect_back_or url_after_create
+      redirect_to root_url, :notice => "Signed up!"
     else
       render 'new'
     end
   end
 
-  def edit_current_user
-  end
+  # def edit_current_user
+  # end
 
   def update
     respond_to do |format|
@@ -48,6 +48,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :dismissed_welcome_message, :digest_subscriber, :digest_frequency)
+    params.require(:user).permit(:email, :encrypted_password)
   end
 end
