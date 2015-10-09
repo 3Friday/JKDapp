@@ -11,8 +11,8 @@
 		<nav>
 			<ul class="menu">
 				<li><%= link_to "About the Project", about_path %></li>
-				<li><a href="levels_front">Levels</a></li>
-				<li><%= link_to "How far are you", howfar_path %></li>
+        <li><%= link_to "Levels", levels_path %></li>
+			 	<li><%= link_to "How far are you", howfar_path %></li>
 			</ul>
 		</nav>
 		<div class = "signing">
@@ -20,7 +20,7 @@
 				<%= link_to "Create an account", new_user_registration_path, class: "signup" %>
 				<%= link_to "Log in", new_user_session_path, class: "login" %>
 			<%# else %>
-				<%= link_to "Log out", destroy_user_session_path, class: "logout" %>
+				<%= link_to "Log out", destroy_user_session_path, class: "logout", method: :delete %>
 			<%# end %>
 		</div>
 	</div>
