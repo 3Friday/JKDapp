@@ -1,0 +1,13 @@
+<div>
+  <%= form_for @part do |f| %>
+      
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>

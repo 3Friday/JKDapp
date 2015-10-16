@@ -1,0 +1,14 @@
+<h1>Parts</h1>
+ 
+<table>
+   
+  <% @parts.each do |part| %>
+    
+      <p><%= link_to part.name, part_path(part) %></p>
+      <%= link_to "Delete", part_path(part), method: :delete %>
+    
+  <% end %>
+  <br>
+  <%= link_to "Create", new_part_path %>
+
+</table>

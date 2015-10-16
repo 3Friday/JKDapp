@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001191446) do
+ActiveRecord::Schema.define(version: 20151016182625) do
 
   create_table "authentications", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20151001191446) do
   end
 
   create_table "levels", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "part_id"
+  end
+
+  create_table "parts", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
