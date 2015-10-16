@@ -29,6 +29,12 @@ html, body {
   color: white;
 }
 
+.notice, .alert{
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
 
 .banner{
   background-color: #C2A7C8;

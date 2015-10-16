@@ -16,12 +16,12 @@
 			</ul>
 		</nav>
 		<div class = "signing">
-			<%# if user_signed_in? %>
+			<% if user_signed_in? %>
+				<%= link_to "Log out", destroy_user_session_path, class: "logout", method: :delete %>
+			<% else %>
 				<%= link_to "Create an account", new_user_registration_path, class: "signup" %>
 				<%= link_to "Log in", new_user_session_path, class: "login" %>
-			<%# else %>
-				<%= link_to "Log out", destroy_user_session_path, class: "logout", method: :delete %>
-			<%# end %>
+			<% end %>
 		</div>
 	</div>
 	<div class = "clear"></div>
