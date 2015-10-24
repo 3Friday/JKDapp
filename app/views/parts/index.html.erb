@@ -4,8 +4,8 @@
    
   <% @parts.each do |part| %>
     
-      <p><%= link_to part.name, part_path(part) %></p>
-      <%= link_to "Delete", part_path(part), method: :delete %>
+      <p><%= link_to part.name, part_path(part) %>
+      <%= link_to "Delete", part_path(part), method: :delete, data: { confirm: 'Lots of parts. Too many? So you want to get rid of this one, huh?' }, class:"action" %></p>
     
   <% end %>
   <br>

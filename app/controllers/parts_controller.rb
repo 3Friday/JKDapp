@@ -10,7 +10,7 @@ class PartsController < ApplicationController
 	def create
 		@part = Part.new(part_params)
 	    if @part.save
-	      redirect_to root_url, :notice => "Woah, a new part! That's a big deal."
+	      redirect_to parts_path, :notice => "Woah, a new part! That's a big deal."
 	    else
 	      render 'new'
 	  	end
@@ -21,7 +21,9 @@ class PartsController < ApplicationController
 	end
 
 	def destroy
+		@part = Part.find(params[:id])
 		@part.destroy
+		redirect_to parts_path
 	end
 
 	private

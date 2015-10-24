@@ -34,6 +34,8 @@ html, body {
   color: white;
   text-align: center;
   font-weight: bold;
+  font-size: 1.5em;
+  line-height: 2em;
 }
 
 .banner{
@@ -62,6 +64,16 @@ html, body {
 
 a{
   color:yellowgreen;
+}
+
+a.action {
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: solid 2px DarkRed;
+  padding: 4px;
+  font-weight: bold;
 }
 
 .banner a{
