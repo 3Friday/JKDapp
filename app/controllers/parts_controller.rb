@@ -17,7 +17,7 @@ class PartsController < ApplicationController
 	end
 
 	def show
-
+		@part = Part.find(params[:id])
 	end
 
 	def destroy
