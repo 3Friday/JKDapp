@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :parts do
     resources :levels
   end
+
   resources :tutorials
 
   resources :users
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   get "welcome/howfar", as: :howfar
   get "welcome/home", as: :home
   get "welcome/howitworks", as: :howitworks
-  
+  get "parts/1", as: :level
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
