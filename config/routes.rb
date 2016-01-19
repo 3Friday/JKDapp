@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get "welcome/home", as: :home
   get "welcome/howitworks", as: :howitworks
   
+  # get "/pages/:id/levels/:id" => "parts#show"
+
   # get "parts/:id", as: :level
   
 

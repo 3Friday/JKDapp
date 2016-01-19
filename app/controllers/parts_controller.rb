@@ -18,6 +18,7 @@ class PartsController < ApplicationController
 
 	def show
 		@part = Part.find(params[:id])
+		# render template: "parts/#{params[:part_id]}/levels/#{params[:id]}"
 	end
 
 	def destroy
