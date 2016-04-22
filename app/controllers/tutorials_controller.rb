@@ -9,5 +9,9 @@ class TutorialsController < ApplicationController
     @tutorials = Tutorial.new
   end
 
+  def show
+    render template: "tutorials/back-end/L1-basics/#{params[:tutorial]}"
+  end
+
 
 end
